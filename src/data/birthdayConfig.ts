@@ -48,7 +48,7 @@ export const birthdayConfig = {
   ] as Memory[],
 
   question: {
-    text: 'Will you make my day special? 💗',
+    text: 'Will you marry me? 💗',
     yesLabel: 'Yes 💕',
     noLabel: 'No 🙈',
     /** Shown one after another each time "No" is pressed (cycles) */
