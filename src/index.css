@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Poppins, system-ui, sans-serif;
+  color: #ffe6f0;
+  background: #1a0512;
+  overflow-x: hidden;
+}
+
+@keyframes float-up {
+  0%   { transform: translate3d(0, 0, 0) scale(1); opacity: 0; }
+  10%  { opacity: var(--o, 0.7); }
+  90%  { opacity: var(--o, 0.7); }
+  100% { transform: translate3d(var(--dx, 0px), -115vh, 0) scale(1.15); opacity: 0; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50%      { opacity: 1;    transform: scale(1.2); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.animate-bob { animation: bob 2.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-heart, .bg-star, .animate-bob { animation: none !important; }
+  .bg-heart { opacity: 0.35 !important; }
+}
